@@ -46,25 +46,44 @@ Type the program in Quartus software. Compile and run the program. Generate the 
 
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. 
-Developed by:  Joann elizabeth RegisterNumber:24900609
-*/
+Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. 
+Developed by:  Joann Elizabeth Samuel RegisterNumber:24900609
+
 ```
-module exp4(a,b,cin,bin,sum,carry,difference,borrow);
-input a,b,cin,bin;
-output sum,carry,difference,borrow;
-assign sum=( (a ^ b)^cin);
-assign carry= ( (a & b)| ( cin &(a ^ b )));
+module fa(a,b,cin,sum,carry);
+input a,b,cin;
+output sum,carry;
+assign sum=( (a ^ b)^c);
+assign carry= ( (a & b)| ( cin &(a ^ b ));
+endmodule
+ 
+module fs(a,b,difference,borrow);
+input a,b,bin;
+output difference,borrow;
 assign difference= ( (a ^ b)^bin);
-assign borrow= ( ( a & b)| ( bin & ((a ^ b ))));
+assign borrow= ( ( a & b)| ( bin & ((a ^ b )));
 endmodule
 ```
 
 **RTL Schematic**
-![Screenshot 2024-12-28 194226](https://github.com/user-attachments/assets/ebb63a6d-101a-4720-96a9-4b0adb760cb6)
+**FULL ADDER**
+
+![image](https://github.com/user-attachments/assets/20e82619-d573-499f-bbee-d27de3f7686c)
+
+**FULL SUBTRACTOR**
+
+![image](https://github.com/user-attachments/assets/e153c969-a69e-446c-b3b8-8800d3da1c63)
+
+
 
 **Output Timing Waveform**
-![Screenshot 2024-12-28 194231](https://github.com/user-attachments/assets/0bd9df83-13cd-4ea8-b572-a5acc044441b)
+
+**FULL ADDER**
+![image](https://github.com/user-attachments/assets/77f6bb20-167e-4655-92ee-3c463fe68df2)
+
+**FULL SUBTRACTOR**
+![image](https://github.com/user-attachments/assets/45ca0501-3d41-45ab-acaa-19dbaf97727d)
+
 
 **Result:**
 
