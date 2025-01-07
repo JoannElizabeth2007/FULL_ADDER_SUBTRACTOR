@@ -66,11 +66,11 @@ assign sum=( (a ^ b)^c);
 assign carry= ( (a & b)| ( cin &(a ^ b ));
 endmodule
  
-module fs(a,b,difference,borrow);
+module fs(a,b,bin,difference,borrow);
 input a,b,bin;
 output difference,borrow;
 assign difference= ( (a ^ b)^bin);
-assign borrow= ( ( a & b)| ( bin & ((a ^ b )));
+assign borrow= ( ( ~a & b)| ( bin & (~(a ^ b ))));
 endmodule
 ```
 
